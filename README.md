@@ -55,10 +55,19 @@
 	git commit -m "更新筆記內容"
 	```
 
+	**全新安裝的 Git 會遇到 :**
+	```bash
+	Run
+	
+	  git config --global user.email "you@example.com"
+	  git config --global user.name "Your Name"
+	```
+
 4. **推送到 GitHub**：
 	```bash
 	git push -u origin main
 	```
+	(第一次加上 `-u`，之後只需輸入 `git push` 即可)
 
 ## ⬇️ 如何將 GitHub 上的筆記「拉回」本地端
 
@@ -78,7 +87,7 @@
 **情況 B：全新電腦，要「第一次下載」整份筆記**
 1. 開啟終端機，切換到你想存放筆記的資料夾
 	```bash
-	cd .\Desktop\Obsidian-note
+	cd .\Desktop
 	```
 
 2. 執行複製指令：
