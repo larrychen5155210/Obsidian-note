@@ -91,9 +91,9 @@
 	```
 
 2. 執行複製指令：
-```bash
-git clone https://github.com/larrychen5155210/Obsidian-note.git
-```
+	```bash
+	git clone https://github.com/larrychen5155210/Obsidian-note.git
+	```
 
 3. 下載完成後，直接用 Obsidian 軟體「開啟舊資料夾 (Open folder as vault)」，選擇該資料夾即可。
 

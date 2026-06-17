@@ -6,6 +6,7 @@
       {
         "id": "f381419d1e66c9f1",
         "type": "tabs",
+        "dimension": 45.939086294416235,
         "children": [
           {
             "id": "0a7ebf276935d2bb",
@@ -26,15 +27,20 @@
       {
         "id": "444a73bb4e1db5b4",
         "type": "tabs",
+        "dimension": 54.060913705583765,
         "children": [
           {
             "id": "1a82134d8440a4c8",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "Proving Grounds Play/Election1/Election1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Election1"
             }
           }
         ]
@@ -201,7 +207,16 @@
   },
   "active": "0a7ebf276935d2bb",
   "lastOpenFiles": [
+    "Proving Grounds Play/Election1/Election1.md",
     "README.md",
-    "未命名.md"
+    "Proving Grounds Play/Election1/image/Pasted image 20260618002553.png",
+    "Proving Grounds Play/Election1",
+    "Proving Grounds Play/Election1/image",
+    "Proving Grounds Play/Election1/image/Pasted image 20260618003656.png",
+    "Proving Grounds Play/Election1/image/Pasted image 20260618003621.png",
+    "Proving Grounds Play/Election1/image/Pasted image 20260618002858.png",
+    "Proving Grounds Play/Election1/image/Pasted image 20260618002737.png",
+    "Proving Grounds Play/Election1/image/Pasted image 20260618002616.png",
+    "Proving Grounds Play"
   ]
 }

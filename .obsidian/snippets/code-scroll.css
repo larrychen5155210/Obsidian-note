@@ -1,0 +1,13 @@
+/* 強制主內文與閱讀模式的程式碼不換行 */
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-codeblock,
+.markdown-rendered pre[class*="language-"] code,
+.markdown-rendered pre {
+    white-space: pre !important;
+    word-break: normal !important;
+    overflow-x: auto !important;
+}
+
+/* 確保程式碼的外層容器允許橫向滾動，不被切掉 */
+.markdown-source-view.mod-cm6 .cm-embed-block.markdown-rendered {
+    overflow-x: auto !important;
+}
