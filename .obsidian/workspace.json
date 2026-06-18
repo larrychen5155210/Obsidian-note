@@ -6,7 +6,6 @@
       {
         "id": "f381419d1e66c9f1",
         "type": "tabs",
-        "dimension": 45.939086294416235,
         "children": [
           {
             "id": "0a7ebf276935d2bb",
@@ -25,18 +24,17 @@
         ]
       },
       {
-        "id": "444a73bb4e1db5b4",
+        "id": "5cf30a9da2e09e27",
         "type": "tabs",
-        "dimension": 54.060913705583765,
         "children": [
           {
-            "id": "1a82134d8440a4c8",
+            "id": "4c311f5a8dcd304c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Proving Grounds Play/Election1/Election1.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -209,14 +207,17 @@
   "lastOpenFiles": [
     "Proving Grounds Play/Election1/Election1.md",
     "README.md",
+    "Proving Grounds Play/Election1/image/Pasted image 20260618002616.png",
     "Proving Grounds Play/Election1/image/Pasted image 20260618002553.png",
-    "Proving Grounds Play/Election1",
-    "Proving Grounds Play/Election1/image",
-    "Proving Grounds Play/Election1/image/Pasted image 20260618003656.png",
-    "Proving Grounds Play/Election1/image/Pasted image 20260618003621.png",
     "Proving Grounds Play/Election1/image/Pasted image 20260618002858.png",
     "Proving Grounds Play/Election1/image/Pasted image 20260618002737.png",
-    "Proving Grounds Play/Election1/image/Pasted image 20260618002616.png",
+    "Proving Grounds Play/Election1/image/Pasted image 20260618003656.png",
+    "Proving Grounds Play/Election1/image/Pasted image 20260618003621.png",
+    "Proving Grounds Play/Election1/image/Pasted image 20260618100552.png",
+    "image/Pasted.md",
+    "image",
+    "Proving Grounds Play/Election1",
+    "Proving Grounds Play/Election1/image",
     "Proving Grounds Play"
   ]
 }

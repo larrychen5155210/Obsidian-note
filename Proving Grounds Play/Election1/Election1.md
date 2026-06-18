@@ -44,13 +44,13 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 .........
 ```
 
-![[Pasted image 20260618002616.png]]
+![](image/Pasted%20image%2020260618002616.png)
 
-![[Pasted image 20260618002737.png]]
+![](image/Pasted%20image%2020260618002737.png)
 
 ##### 在 `robots.tst` 裡找到一個其中一個目錄 `/election`，從這個目錄繼續嘗試爆破，且因為有找到 `phpinfo.php`，所以指定副檔名 `.php`，`-d 2` 限制只爆破到目錄第 2 層
 
-![[Pasted image 20260618002858.png]]
+![](image/Pasted%20image%2020260618002858.png)
 
 ```bash
 ┌──(kali㉿kali)-[~/Downloads]
@@ -67,7 +67,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ...........
 ```
 
-![[Pasted image 20260618003621.png]]
+![](image/Pasted%20image%2020260618003621.png)
 
-![[Pasted image 20260618003656.png]]
+![](image/Pasted%20image%2020260618003656.png)
 
