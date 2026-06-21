@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1154ab7db323520b",
+            "id": "cdaf4b4ac0e1bb4d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Election1"
             }
+          },
+          {
+            "id": "9af4a54a349ae434",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "指令/rustscan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "rustscan"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -104,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Proving Grounds Play/Election1/Election1.md",
+                "file": "指令/rustscan.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +129,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Election1 的反向連結"
+              "title": "rustscan 的反向連結"
             }
           },
           {
@@ -174,13 +189,23 @@
               "icon": "lucide-list",
               "title": "README 的大纲"
             }
+          },
+          {
+            "id": "3d1583d13505ad30",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {},
+              "icon": "lines-of-text",
+              "title": "Quiet Outline"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,22 +219,26 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "1154ab7db323520b",
+  "active": "9af4a54a349ae434",
   "lastOpenFiles": [
+    "Proving Grounds Play/Stapler/Stapler.md",
+    "README.md",
+    "Proving Grounds Play/Election1/Election1.md",
+    "Proving Grounds Play/Stapler/image/Pasted image 20260621020414.png",
+    "Proving Grounds Play/Stapler/image/Pasted image 20260620215956.png",
+    "Proving Grounds Play/Stapler/image/Pasted image 20260620215900.png",
+    "Proving Grounds Play/Stapler/image/Pasted image 20260620215543.png",
+    "Proving Grounds Play/Stapler/image",
+    "指令/rustscan.md",
+    "Proving Grounds Play/Stapler",
+    "指令",
     "Proving Grounds Play/Election1/image/Pasted image 20260620025815.png",
     "Proving Grounds Play/Election1/image/Pasted image 20260620025638.png",
     "Proving Grounds Play/Election1/image/Pasted image 20260620024022.png",
     "Proving Grounds Play/Election1/image/Pasted image 20260620023412.png",
-    "Proving Grounds Play/Election1/Election1.md",
     "image/Pasted.md",
-    "README.md",
     "Proving Grounds Play/Election1/image/Pasted image 20260618002616.png",
     "Proving Grounds Play/Election1/image/Pasted image 20260618002553.png",
-    "Proving Grounds Play/Election1/image/Pasted image 20260618002858.png",
-    "Proving Grounds Play/Election1/image/Pasted image 20260618002737.png",
-    "Proving Grounds Play/Election1/image/Pasted image 20260618003656.png",
-    "Proving Grounds Play/Election1/image/Pasted image 20260618003621.png",
-    "Proving Grounds Play/Election1/image/Pasted image 20260618100552.png",
     "image",
     "Proving Grounds Play/Election1",
     "Proving Grounds Play/Election1/image",
