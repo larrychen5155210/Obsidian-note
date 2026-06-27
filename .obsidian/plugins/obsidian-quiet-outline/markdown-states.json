@@ -1,20 +1,22 @@
 {
   "Proving Grounds Play/Stapler/Stapler.md": {
-    "scroll": 0,
+    "scroll": 477.75,
     "cursor": {
       "from": {
-        "line": 0,
-        "ch": 0
+        "line": 331,
+        "ch": 1
       },
       "to": {
-        "line": 0,
-        "ch": 0
+        "line": 331,
+        "ch": 1
       }
     },
-    "expandedKeys": []
+    "expandedKeys": [
+      "item-1-6"
+    ]
   },
   "Proving Grounds Play/Election1/Election1.md": {
-    "scroll": 51.99769053117783,
+    "scroll": 210.00344431687716,
     "cursor": {
       "from": {
         "line": 0,
@@ -28,7 +30,7 @@
     "expandedKeys": []
   },
   "README.md": {
-    "scroll": 429.7745803357314,
+    "scroll": 22.684931506849317,
     "cursor": {
       "from": {
         "line": 0,
@@ -56,5 +58,57 @@
       }
     },
     "expandedKeys": []
+  },
+  "Templates/靶機紀錄模板.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 12,
+        "ch": 0
+      },
+      "to": {
+        "line": 12,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0",
+      "item-2-1",
+      "item-3-3",
+      "item-2-6",
+      "item-2-9"
+    ]
+  },
+  "Proving Grounds Play/Election1/Election1-Walkthrough.md": {
+    "scroll": 8.8125,
+    "cursor": {
+      "from": {
+        "line": 17,
+        "ch": 60
+      },
+      "to": {
+        "line": 17,
+        "ch": 60
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
+  },
+  "Proving Grounds Play/Stapler/Stapler-Walkthrough.md": {
+    "scroll": 17.48,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ]
   }
 }

