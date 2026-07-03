@@ -99,6 +99,7 @@ Finished
 - `/Temari`
 - `/Kazekage`
 - `/iamGaara`
+
 	![](image/Pasted%20image%2020260703144439.png)
 
 這三個頁面外觀相似，但透過對比，發現 `/iamGaara` 頁面在底部多出了一串字串：

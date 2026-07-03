@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Proving Grounds Play/Gaara/Gaara-Walkthrough.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Gaara-Walkthrough"
             }
           },
           {
@@ -234,6 +234,7 @@
   },
   "active": "91b3e6d05e76cc53",
   "lastOpenFiles": [
+    "README.md",
     "Proving Grounds Play/Gaara/Gaara-Walkthrough.md",
     "指令/suid.md",
     "Proving Grounds Play/Gaara/Gaara.md",
@@ -259,7 +260,6 @@
     "Templates/靶機簡介模板.md",
     "Proving Grounds Play/SoSimple/SoSimple-Walkthrough.md",
     "指令/ssh-private-key.md",
-    "README.md",
     "Proving Grounds Play/Vegeta1/Vegeta1-Walkthrough.md",
     "Proving Grounds Play/Election1/Election1-Walkthrough.md",
     "Templates/靶機紀錄模板.md",
