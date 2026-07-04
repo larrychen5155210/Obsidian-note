@@ -11,14 +11,10 @@
             "id": "cdaf4b4ac0e1bb4d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "指令/wordpress.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "wordpress"
+              "title": "新分頁"
             }
           },
           {
@@ -27,30 +23,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Proving Grounds Play/Gaara/Gaara-Walkthrough.md",
+                "file": "Templates/靶機簡介模板.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gaara-Walkthrough"
+              "title": "靶機簡介模板"
             }
           },
           {
-            "id": "dfb1c66e4ff323ff",
+            "id": "846669a2825e3563",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "指令/sudo_-l.md",
+                "file": "Templates/靶機簡介模板.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sudo_-l"
+              "title": "靶機簡介模板"
+            }
+          },
+          {
+            "id": "3bed7e70d9ab61b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Proving Grounds Play/Blogger/Blogger.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Blogger"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -73,7 +83,7 @@
                 "autoReveal": true
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "檔案瀏覽器"
             }
           },
           {
@@ -92,7 +102,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:suid",
+                "query": "tag:#cron-job",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -100,7 +110,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "搜索"
+              "title": "搜尋"
             }
           },
           {
@@ -167,12 +177,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
+                "useHierarchy": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "标签"
+              "title": "標籤"
             }
           },
           {
@@ -186,7 +196,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "添加笔记属性"
+              "title": "所有屬性"
             }
           },
           {
@@ -195,13 +205,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "Proving Grounds Play/Blogger/Blogger.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "README 的大纲"
+              "title": "Blogger 的大綱"
             }
           },
           {
@@ -223,61 +233,62 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "command-palette:打开命令面板": false,
-      "bases:新建数据库": false,
+      "switcher:開啟快速切換": false,
+      "graph:查看關聯圖": false,
+      "canvas:建立新畫布": false,
+      "daily-notes:開啟今天的每日筆記": false,
+      "command-palette:開啟命令面板": false,
+      "bases:建立新的 base": false,
       "templates:插入模板": false
     }
   },
-  "active": "91b3e6d05e76cc53",
+  "active": "3bed7e70d9ab61b4",
   "lastOpenFiles": [
     "README.md",
-    "Proving Grounds Play/Gaara/Gaara-Walkthrough.md",
-    "指令/suid.md",
-    "Proving Grounds Play/Gaara/Gaara.md",
-    "Proving Grounds Play/Gaara/image/Pasted image 20260703145346.png",
-    "指令/base64-base58.md",
-    "Proving Grounds Play/Gaara/image/Pasted image 20260703145203.png",
-    "Proving Grounds Play/Gaara/image/Pasted image 20260703145135.png",
-    "Proving Grounds Play/Gaara/image/Pasted image 20260703145004.png",
-    "Proving Grounds Play/Gaara/image/Pasted image 20260703144903.png",
-    "Proving Grounds Play/Gaara/image/Pasted image 20260703144439.png",
-    "Proving Grounds Play/Gaara/image/Pasted image 20260703143031.png",
-    "Proving Grounds Play/Gaara/image",
-    "Proving Grounds Play/SoSimple/SoSimple.md",
-    "Proving Grounds Play/Vegeta1/Vegeta1.md",
-    "指令/sudo_-l.md",
-    "指令/pwnkit.md",
-    "指令/gtfobins.md",
-    "Proving Grounds Play/Election1/Election1.md",
-    "指令/wordpress.md",
-    "Proving Grounds Play/Gaara",
-    "指令/ssh-bruteforce.md",
+    "指令_手法/cron-job.md",
     "Proving Grounds Play/Stapler/Stapler.md",
+    "Proving Grounds Play/Amaterasu/Amaterasu.md",
     "Templates/靶機簡介模板.md",
+    "指令_手法/tar-wildcard.md",
+    "指令_手法/path-hijacking.md",
+    "指令_手法/wordpress.md",
+    "Proving Grounds Play/Blogger/Blogger.md",
+    "Proving Grounds Play/Blogger/Blogger-Walkthrough.md",
+    "{{title}}-Walkthrough.md",
+    "URL.md",
+    "指令_手法/pwnkit.md",
+    "Proving Grounds Play/Election1/Election1.md",
+    "指令_手法/mysql.md",
+    "指令_手法/file-upload.md",
+    "Proving Grounds Play/SoSimple/SoSimple.md",
+    "Proving Grounds Play/Blogger/image/Pasted image 20260704232751.png",
+    "Proving Grounds Play/Blogger/image/Pasted image 20260704232330.png",
+    "Proving Grounds Play/Blogger/image/Pasted image 20260704232103.png",
+    "Proving Grounds Play/Blogger/image/Pasted image 20260704231902.png",
+    "Proving Grounds Play/Blogger/image/Pasted image 20260704225619.png",
+    "Proving Grounds Play/Blogger/image/Pasted image 20260704225518.png",
+    "Proving Grounds Play/Blogger/image/Pasted image 20260704223928.png",
+    "Proving Grounds Play/Blogger/image/Pasted image 20260704223903.png",
+    "Proving Grounds Play/Blogger/image/Pasted image 20260704223745.png",
+    "Proving Grounds Play/Blogger/image/Pasted image 20260704223706.png",
+    "Proving Grounds Play/Blogger/image",
+    "Proving Grounds Play/Amaterasu/Amaterasu-Walkthrough.md",
+    "Proving Grounds Play/Stapler/Stapler-Walkthrough.md",
     "Proving Grounds Play/SoSimple/SoSimple-Walkthrough.md",
-    "指令/ssh-private-key.md",
-    "Proving Grounds Play/Vegeta1/Vegeta1-Walkthrough.md",
-    "Proving Grounds Play/Election1/Election1-Walkthrough.md",
+    "Proving Grounds Play/Blogger",
+    "Proving Grounds Play/Gaara/Gaara.md",
     "Templates/靶機紀錄模板.md",
-    "指令/writable-etc-passwd.md",
-    "指令/suid-serv-u-ftp-server.md",
-    "指令/sudo-l.md",
+    "指令_手法/writable-etc-passwd.md",
+    "指令_手法/base64-base58.md",
+    "Proving Grounds Play/Gaara/Gaara-Walkthrough.md",
+    "Proving Grounds Play/Amaterasu/image",
+    "指令_手法/rustscan.md",
+    "Proving Grounds Play/Amaterasu",
+    "指令_手法",
+    "Proving Grounds Play/Gaara/image",
+    "Proving Grounds Play/Gaara",
     "Proving Grounds Play/SoSimple/image",
     "Proving Grounds Play/SoSimple",
-    "Proving Grounds Play/Monitoring/Monitoring.md",
-    "指令/nagios-rce.md",
-    "Proving Grounds Play/Vegeta1/image/Pasted image 20260702223241.png",
-    "Proving Grounds Play/Vegeta1/image/Pasted image 20260702222657.png",
-    "Proving Grounds Play/Vegeta1/image/Pasted image 20260702222610.png",
-    "Proving Grounds Play/Vegeta1/image",
-    "Proving Grounds Play/Vegeta1",
-    "Proving Grounds Play/InsanityHosting/image",
-    "Proving Grounds Play/InsanityHosting",
-    "Proving Grounds Play/Monitoring/image",
-    "Proving Grounds Play/Monitoring"
+    "Proving Grounds Play/Vegeta1/image"
   ]
 }

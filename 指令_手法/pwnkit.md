@@ -16,4 +16,4 @@ chmod +x PwnKit
 ---
 
 # 實戰關聯
-*   **靶機應用實例**：[[Election1]]
+*   **靶機應用實例**：[[Election1]]、[[Blogger]]

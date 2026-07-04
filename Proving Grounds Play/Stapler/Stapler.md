@@ -25,7 +25,7 @@ difficulty: easy
 
 ## 2. 初始存取 (Initial Access)
 *   **方法 A（原路徑 - LFI 與 MySQL 寫入）**：
-    *   使用 [[wordpress#🔍 Wpscan 漏洞與使用者列舉|wpscan]] 發現 `advanced-video-embed-...` 外掛存在 [[wordpress#💥 LFI 本地檔案包含|LFI（本地檔案包含）]] 漏洞。
+    *   使用 [[wordpress#🔍 Wpscan 漏洞與使用者列舉|wpscan]] 發現 `advanced-video-embed-...` 外掛存在 [[wordpress#💥 Advanced Video 1.0 本地檔案包含 (CVE-2016-39646)|LFI（本地檔案包含）]] 漏洞。
     *   利用 LFI 讀取 `/blogblog/wp-config.php`，取得 MySQL 密碼 `root:plbkac`。
     *   登入 MySQL 資料庫，使用 [[mysql#💥 INTO OUTFILE 寫入 Web Shell|INTO OUTFILE]] 將 Web Shell 寫入 `/var/www/https/blogblog/wp-content/uploads/shell.php`。
     *   存取 Web Shell 並觸發 NC Reverse Shell 取得 `www-data` 權限並取得 `local.txt`。
