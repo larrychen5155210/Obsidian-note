@@ -149,6 +149,7 @@ Finished
 	![](image/Pasted%20image%2020260706031710.png)
 	![](image/Pasted%20image%2020260706031807.png)
 	![](image/Pasted%20image%2020260706031848.png)
+
 成功登入 `/admin/dashboard.php`。
 
 #### 2. 目錄走訪讀取 /etc/passwd 獲取 Hash
