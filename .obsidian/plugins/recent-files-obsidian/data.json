@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Potato-Walkthrough",
+      "path": "Proving Grounds Play/Potato/Potato-Walkthrough.md"
+    },
+    {
       "basename": "sudo_-l",
       "path": "指令_手法/sudo_-l.md"
     },
@@ -11,10 +15,6 @@
     {
       "basename": "php-type-juggling",
       "path": "指令_手法/php-type-juggling.md"
-    },
-    {
-      "basename": "Potato-Walkthrough",
-      "path": "Proving Grounds Play/Potato/Potato-Walkthrough.md"
     },
     {
       "basename": "sqli",

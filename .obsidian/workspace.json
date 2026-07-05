@@ -46,7 +46,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -191,13 +191,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "指令_手法/sudo_-l.md",
+                "file": "Proving Grounds Play/Potato/Potato-Walkthrough.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "sudo_-l 的大綱"
+              "title": "Potato-Walkthrough 的大綱"
             }
           },
           {
@@ -228,12 +228,12 @@
       "templates:插入模板": false
     }
   },
-  "active": "ad489e9d68ae9067",
+  "active": "3bed7e70d9ab61b4",
   "lastOpenFiles": [
+    "指令_手法/sudo_-l.md",
     "Proving Grounds Play/Potato/Potato.md",
     "指令_手法/php-type-juggling.md",
     "Proving Grounds Play/Potato/Potato-Walkthrough.md",
-    "指令_手法/sudo_-l.md",
     "Proving Grounds Play/Potato/image/Pasted image 20260706032422.png",
     "Proving Grounds Play/Potato/image/Pasted image 20260706032249.png",
     "Proving Grounds Play/Potato/image/Pasted image 20260706032157.png",
