@@ -18,31 +18,17 @@
             }
           },
           {
-            "id": "91b3e6d05e76cc53",
+            "id": "ad489e9d68ae9067",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/靶機簡介模板.md",
+                "file": "指令_手法/sudo_-l.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "靶機簡介模板"
-            }
-          },
-          {
-            "id": "846669a2825e3563",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Templates/靶機簡介模板.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "靶機簡介模板"
+              "title": "sudo_-l"
             }
           },
           {
@@ -51,16 +37,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "preview",
+                "file": "Proving Grounds Play/Potato/Potato-Walkthrough.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Potato-Walkthrough"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -102,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#cron-job",
+                "query": "lfi",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -205,13 +191,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "指令_手法/sudo_-l.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "README 的大綱"
+              "title": "sudo_-l 的大綱"
             }
           },
           {
@@ -242,53 +228,52 @@
       "templates:插入模板": false
     }
   },
-  "active": "3bed7e70d9ab61b4",
+  "active": "ad489e9d68ae9067",
   "lastOpenFiles": [
-    "Proving Grounds Play/Blogger/Blogger.md",
-    "README.md",
-    "指令_手法/cron-job.md",
+    "Proving Grounds Play/Potato/Potato.md",
+    "指令_手法/php-type-juggling.md",
+    "Proving Grounds Play/Potato/Potato-Walkthrough.md",
+    "指令_手法/sudo_-l.md",
+    "Proving Grounds Play/Potato/image/Pasted image 20260706032422.png",
+    "Proving Grounds Play/Potato/image/Pasted image 20260706032249.png",
+    "Proving Grounds Play/Potato/image/Pasted image 20260706032157.png",
+    "Proving Grounds Play/Potato/image/Pasted image 20260706031848.png",
+    "Proving Grounds Play/Potato/image/Pasted image 20260706031807.png",
+    "Proving Grounds Play/Potato/image/Pasted image 20260706031710.png",
+    "Proving Grounds Play/Potato/image/Pasted image 20260706031542.png",
+    "Proving Grounds Play/Potato/image/Pasted image 20260706030157.png",
+    "Proving Grounds Play/Potato/image/Pasted image 20260706030146.png",
+    "Proving Grounds Play/Potato/image",
+    "指令_手法/sqli.md",
     "Proving Grounds Play/Stapler/Stapler.md",
-    "Proving Grounds Play/Amaterasu/Amaterasu.md",
-    "Templates/靶機簡介模板.md",
-    "指令_手法/tar-wildcard.md",
-    "指令_手法/path-hijacking.md",
-    "指令_手法/wordpress.md",
     "Proving Grounds Play/Blogger/Blogger-Walkthrough.md",
-    "{{title}}-Walkthrough.md",
-    "URL.md",
-    "指令_手法/pwnkit.md",
-    "Proving Grounds Play/Election1/Election1.md",
-    "指令_手法/mysql.md",
-    "指令_手法/file-upload.md",
-    "Proving Grounds Play/SoSimple/SoSimple.md",
-    "Proving Grounds Play/Blogger/image/Pasted image 20260704232751.png",
-    "Proving Grounds Play/Blogger/image/Pasted image 20260704232330.png",
-    "Proving Grounds Play/Blogger/image/Pasted image 20260704232103.png",
-    "Proving Grounds Play/Blogger/image/Pasted image 20260704231902.png",
-    "Proving Grounds Play/Blogger/image/Pasted image 20260704225619.png",
-    "Proving Grounds Play/Blogger/image/Pasted image 20260704225518.png",
-    "Proving Grounds Play/Blogger/image/Pasted image 20260704223928.png",
-    "Proving Grounds Play/Blogger/image/Pasted image 20260704223903.png",
-    "Proving Grounds Play/Blogger/image/Pasted image 20260704223745.png",
-    "Proving Grounds Play/Blogger/image/Pasted image 20260704223706.png",
-    "Proving Grounds Play/Blogger/image",
-    "Proving Grounds Play/Amaterasu/Amaterasu-Walkthrough.md",
-    "Proving Grounds Play/Stapler/Stapler-Walkthrough.md",
-    "Proving Grounds Play/SoSimple/SoSimple-Walkthrough.md",
-    "Proving Grounds Play/Blogger",
-    "Proving Grounds Play/Gaara/Gaara.md",
-    "Templates/靶機紀錄模板.md",
-    "指令_手法/writable-etc-passwd.md",
-    "指令_手法/base64-base58.md",
     "Proving Grounds Play/Gaara/Gaara-Walkthrough.md",
-    "Proving Grounds Play/Amaterasu/image",
+    "Templates/靶機紀錄模板.md",
+    "指令_手法/mysql.md",
+    "指令_手法/path-traversal.md",
+    "指令_手法/path-hijacking.md",
+    "Proving Grounds Play/Amaterasu/Amaterasu.md",
+    "指令_手法/file-upload.md",
+    "指令_手法/directory-traversal.md",
+    "Proving Grounds Play/SoSimple/SoSimple.md",
+    "指令_手法/wordpress.md",
+    "Templates/指令手法模板.md",
+    "指令_手法/tar-wildcard.md",
+    "指令_手法/pwnkit.md",
+    "Proving Grounds Play/Potato",
+    "Templates/靶機簡介模板.md",
+    "URL.md",
+    "Templates/URL.md",
+    "指令_手法/writable-etc-passwd.md",
     "指令_手法/rustscan.md",
+    "Proving Grounds Play/Blogger/image/Pasted image 20260704232751.png",
+    "Proving Grounds Play/Blogger/image",
+    "Proving Grounds Play/Blogger",
+    "Proving Grounds Play/Amaterasu/image",
     "Proving Grounds Play/Amaterasu",
     "指令_手法",
     "Proving Grounds Play/Gaara/image",
     "Proving Grounds Play/Gaara",
-    "Proving Grounds Play/SoSimple/image",
-    "Proving Grounds Play/SoSimple",
-    "Proving Grounds Play/Vegeta1/image"
+    "Proving Grounds Play/SoSimple/image"
   ]
 }

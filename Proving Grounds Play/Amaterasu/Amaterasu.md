@@ -29,8 +29,8 @@ difficulty: easy
         *   `POST /file-upload`
 
 ## 2. 初始存取 (Initial Access)
-*   **REST API 檔案上傳與路徑穿越**：
-    *   `/file-upload` 對 `file` 的副檔名設有白名單（僅允許 `txt, pdf, png, jpg, jpeg, gif` 等），但未過濾 `filename` 參數，導致存在 [[file-upload#💥 REST API 檔案上傳繞過與路徑穿越|路徑穿越 (Path Traversal)]] 漏洞。
+*   **[[file-upload#💥 REST API 檔案上傳繞過與路徑穿越|REST API]] 檔案上傳與路徑穿越**：
+    *   `/file-upload` 對 `file` 的副檔名設有白名單（僅允許 `txt, pdf, png, jpg, jpeg, gif` 等），但未過濾 `filename` 參數，導致存在 [[path-traversal#💥 路徑/目錄走訪 (path-traversal)|路徑穿越 (Path Traversal)]] 漏洞。
     *   將 Kali 的 SSH 公鑰命名為 `authorized_keys.txt` 並透過上傳繞過限制。
     *   將 `filename` 參數設為 `../home/alfredo/.ssh/authorized_keys`，直接覆寫用戶 `alfredo` 的 SSH 授權金鑰。
     *   利用私鑰成功以 `alfredo` 用戶身分登入 SSH (Port 25022)，並取得 `local.txt`。
