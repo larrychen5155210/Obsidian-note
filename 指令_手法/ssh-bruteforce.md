@@ -1,4 +1,4 @@
-# SSH 服務密碼爆破 (ssh-bruteforce)
+# 💥 SSH 服務密碼爆破 (ssh-bruteforce)
 本文件說明如何針對 SSH 服務進行帳號密碼暴力破解，獲取初始系統存取權。
 
 ## 🔍 Hydra SSH 密碼爆破
@@ -20,4 +20,6 @@ hydra -L user_list.txt -P /usr/share/wordlists/rockyou.txt ssh://<target-ip> -t 
 ---
 
 # 實戰關聯
-*   **靶機應用實例**：[[Gaara]]
+*   **靶機應用實例**：
+    *   [[Gaara]]（使用 `rockyou.txt` 對使用者 `gaara` 進行 SSH 密碼爆破取得 Shell）。
+    *   [[DC-9]]（將 SQLi 導出的 `UserDetails` 表格資料做成使用者與密碼字典，利用 Hydra 進行 SSH 憑證噴灑，成功取得 `janitor` 等多個系統帳號的 SSH 存取權）。

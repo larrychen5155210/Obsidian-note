@@ -40,3 +40,4 @@ http://target.com/dashboard.php?file=../../../../../../etc/passwd
 *   **靶機應用實例**：
     *   [[Potato]]（在管理後台 `dashboard.php` 中，利用 `file` 參數存在目錄走訪漏洞，透過 Burp Suite 爆破深度，成功讀取包含 `webadmin` 的密碼 Hash 的 `/etc/passwd` 檔案）。
     *   [[Amaterasu]]（在 Port 33414 的 REST API 檔案上傳端點中，未過濾 `filename` 參數，導致存在路徑穿越漏洞，可用於上傳 SSH 公鑰覆寫使用者 `alfredo` 的授權金鑰）。
+    *   [[DC-9]]（在管理後台 `manage.php` 中，利用 `file` 參數存在路徑穿越漏洞，讀取伺服器上的 `/etc/passwd` 取得系統帳號，以及 `/etc/knockd.conf` 取得 SSH 連接埠敲擊順序）。

@@ -1,8 +1,40 @@
 {
   "recentFiles": [
     {
+      "basename": "port-knocking",
+      "path": "指令_手法/port-knocking.md"
+    },
+    {
+      "basename": "DC-9-Walkthrough",
+      "path": "Proving Grounds Play/DC-9/DC-9-Walkthrough.md"
+    },
+    {
       "basename": "Potato-Walkthrough",
       "path": "Proving Grounds Play/Potato/Potato-Walkthrough.md"
+    },
+    {
+      "basename": "靶機紀錄模板",
+      "path": "Templates/靶機紀錄模板.md"
+    },
+    {
+      "basename": "DC-9",
+      "path": "Proving Grounds Play/DC-9/DC-9.md"
+    },
+    {
+      "basename": "sqli",
+      "path": "指令_手法/sqli.md"
+    },
+    {
+      "basename": "writable-etc-passwd",
+      "path": "指令_手法/writable-etc-passwd.md"
+    },
+    {
+      "basename": "path-traversal",
+      "path": "指令_手法/path-traversal.md"
+    },
+    {
+      "basename": "Blogger",
+      "path": "Proving Grounds Play/Blogger/Blogger.md"
     },
     {
       "basename": "sudo_-l",
@@ -17,10 +49,6 @@
       "path": "指令_手法/php-type-juggling.md"
     },
     {
-      "basename": "sqli",
-      "path": "指令_手法/sqli.md"
-    },
-    {
       "basename": "Stapler",
       "path": "Proving Grounds Play/Stapler/Stapler.md"
     },
@@ -33,16 +61,8 @@
       "path": "Proving Grounds Play/Gaara/Gaara-Walkthrough.md"
     },
     {
-      "basename": "靶機紀錄模板",
-      "path": "Templates/靶機紀錄模板.md"
-    },
-    {
       "basename": "mysql",
       "path": "指令_手法/mysql.md"
-    },
-    {
-      "basename": "path-traversal",
-      "path": "指令_手法/path-traversal.md"
     },
     {
       "basename": "path-hijacking",
@@ -81,10 +101,6 @@
       "path": "Templates/靶機簡介模板.md"
     },
     {
-      "basename": "writable-etc-passwd",
-      "path": "指令_手法/writable-etc-passwd.md"
-    },
-    {
       "basename": "rustscan",
       "path": "指令_手法/rustscan.md"
     },
@@ -99,10 +115,6 @@
     {
       "basename": "README",
       "path": "README.md"
-    },
-    {
-      "basename": "Blogger",
-      "path": "Proving Grounds Play/Blogger/Blogger.md"
     },
     {
       "basename": "cron-job",

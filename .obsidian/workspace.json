@@ -37,12 +37,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Proving Grounds Play/Potato/Potato-Walkthrough.md",
+                "file": "指令_手法/port-knocking.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Potato-Walkthrough"
+              "title": "port-knocking"
             }
           }
         ],
@@ -88,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "lfi",
+                "query": "tag:pg-play",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -191,13 +191,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Proving Grounds Play/Potato/Potato-Walkthrough.md",
+                "file": "指令_手法/port-knocking.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Potato-Walkthrough 的大綱"
+              "title": "port-knocking 的大綱"
             }
           },
           {
@@ -230,10 +230,23 @@
   },
   "active": "3bed7e70d9ab61b4",
   "lastOpenFiles": [
+    "Proving Grounds Play/DC-9/DC-9-Walkthrough.md",
+    "Proving Grounds Play/Potato/Potato-Walkthrough.md",
+    "Templates/靶機紀錄模板.md",
+    "Proving Grounds Play/DC-9/DC-9.md",
+    "指令_手法/sqli.md",
+    "Vulnhub/DC-9/DC-9.md",
+    "Proving Grounds Play/DC-9",
+    "指令_手法/writable-etc-passwd.md",
+    "指令_手法/path-traversal.md",
+    "指令_手法/port-knocking.md",
+    "Proving Grounds Play/Blogger/Blogger.md",
+    "Vulnhub/DC-9/DC-9-Walkthrough.md",
+    "Vulnhub/DC-9",
+    "Vulnhub",
     "指令_手法/sudo_-l.md",
     "Proving Grounds Play/Potato/Potato.md",
     "指令_手法/php-type-juggling.md",
-    "Proving Grounds Play/Potato/Potato-Walkthrough.md",
     "Proving Grounds Play/Potato/image/Pasted image 20260706032422.png",
     "Proving Grounds Play/Potato/image/Pasted image 20260706032249.png",
     "Proving Grounds Play/Potato/image/Pasted image 20260706032157.png",
@@ -244,13 +257,10 @@
     "Proving Grounds Play/Potato/image/Pasted image 20260706030157.png",
     "Proving Grounds Play/Potato/image/Pasted image 20260706030146.png",
     "Proving Grounds Play/Potato/image",
-    "指令_手法/sqli.md",
     "Proving Grounds Play/Stapler/Stapler.md",
     "Proving Grounds Play/Blogger/Blogger-Walkthrough.md",
     "Proving Grounds Play/Gaara/Gaara-Walkthrough.md",
-    "Templates/靶機紀錄模板.md",
     "指令_手法/mysql.md",
-    "指令_手法/path-traversal.md",
     "指令_手法/path-hijacking.md",
     "Proving Grounds Play/Amaterasu/Amaterasu.md",
     "指令_手法/file-upload.md",
@@ -259,21 +269,12 @@
     "指令_手法/wordpress.md",
     "Templates/指令手法模板.md",
     "指令_手法/tar-wildcard.md",
-    "指令_手法/pwnkit.md",
     "Proving Grounds Play/Potato",
-    "Templates/靶機簡介模板.md",
-    "URL.md",
-    "Templates/URL.md",
-    "指令_手法/writable-etc-passwd.md",
-    "指令_手法/rustscan.md",
     "Proving Grounds Play/Blogger/image/Pasted image 20260704232751.png",
     "Proving Grounds Play/Blogger/image",
     "Proving Grounds Play/Blogger",
     "Proving Grounds Play/Amaterasu/image",
     "Proving Grounds Play/Amaterasu",
-    "指令_手法",
-    "Proving Grounds Play/Gaara/image",
-    "Proving Grounds Play/Gaara",
-    "Proving Grounds Play/SoSimple/image"
+    "指令_手法"
   ]
 }
