@@ -1,164 +1,60 @@
 {
   "recentFiles": [
     {
-      "basename": "port-knocking",
-      "path": "指令_手法/port-knocking.md"
-    },
-    {
-      "basename": "DC-9-Walkthrough",
-      "path": "Proving Grounds Play/DC-9/DC-9-Walkthrough.md"
-    },
-    {
-      "basename": "Potato-Walkthrough",
-      "path": "Proving Grounds Play/Potato/Potato-Walkthrough.md"
-    },
-    {
-      "basename": "靶機紀錄模板",
-      "path": "Templates/靶機紀錄模板.md"
-    },
-    {
-      "basename": "DC-9",
-      "path": "Proving Grounds Play/DC-9/DC-9.md"
-    },
-    {
-      "basename": "sqli",
-      "path": "指令_手法/sqli.md"
-    },
-    {
-      "basename": "writable-etc-passwd",
-      "path": "指令_手法/writable-etc-passwd.md"
-    },
-    {
-      "basename": "path-traversal",
-      "path": "指令_手法/path-traversal.md"
-    },
-    {
-      "basename": "Blogger",
-      "path": "Proving Grounds Play/Blogger/Blogger.md"
-    },
-    {
-      "basename": "sudo_-l",
-      "path": "指令_手法/sudo_-l.md"
-    },
-    {
-      "basename": "Potato",
-      "path": "Proving Grounds Play/Potato/Potato.md"
-    },
-    {
-      "basename": "php-type-juggling",
-      "path": "指令_手法/php-type-juggling.md"
-    },
-    {
-      "basename": "Stapler",
-      "path": "Proving Grounds Play/Stapler/Stapler.md"
-    },
-    {
-      "basename": "Blogger-Walkthrough",
-      "path": "Proving Grounds Play/Blogger/Blogger-Walkthrough.md"
+      "basename": "README",
+      "path": "README.md"
     },
     {
       "basename": "Gaara-Walkthrough",
       "path": "Proving Grounds Play/Gaara/Gaara-Walkthrough.md"
     },
     {
-      "basename": "mysql",
-      "path": "指令_手法/mysql.md"
-    },
-    {
-      "basename": "path-hijacking",
-      "path": "指令_手法/path-hijacking.md"
-    },
-    {
-      "basename": "Amaterasu",
-      "path": "Proving Grounds Play/Amaterasu/Amaterasu.md"
-    },
-    {
-      "basename": "file-upload",
-      "path": "指令_手法/file-upload.md"
+      "basename": "Gaara",
+      "path": "Proving Grounds Play/Gaara/Gaara.md"
     },
     {
       "basename": "SoSimple",
       "path": "Proving Grounds Play/SoSimple/SoSimple.md"
     },
     {
-      "basename": "wordpress",
-      "path": "指令_手法/wordpress.md"
-    },
-    {
-      "basename": "指令手法模板",
-      "path": "Templates/指令手法模板.md"
-    },
-    {
-      "basename": "tar-wildcard",
-      "path": "指令_手法/tar-wildcard.md"
-    },
-    {
-      "basename": "pwnkit",
-      "path": "指令_手法/pwnkit.md"
-    },
-    {
-      "basename": "靶機簡介模板",
-      "path": "Templates/靶機簡介模板.md"
-    },
-    {
-      "basename": "rustscan",
-      "path": "指令_手法/rustscan.md"
-    },
-    {
-      "basename": "bash_history",
-      "path": "指令_手法/bash_history.md"
-    },
-    {
-      "basename": "base64-base58",
-      "path": "指令_手法/base64-base58.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "cron-job",
-      "path": "指令_手法/cron-job.md"
-    },
-    {
-      "basename": "{{title}}-Walkthrough",
-      "path": "Templates/{{title}}-Walkthrough.md"
+      "basename": "Vegeta1",
+      "path": "Proving Grounds Play/Vegeta1/Vegeta1.md"
     },
     {
       "basename": "Election1",
       "path": "Proving Grounds Play/Election1/Election1.md"
     },
     {
-      "basename": "Amaterasu-Walkthrough",
-      "path": "Proving Grounds Play/Amaterasu/Amaterasu-Walkthrough.md"
+      "basename": "Stapler",
+      "path": "Proving Grounds Play/Stapler/Stapler.md"
     },
     {
-      "basename": "Stapler-Walkthrough",
-      "path": "Proving Grounds Play/Stapler/Stapler-Walkthrough.md"
+      "basename": "靶機簡介模板",
+      "path": "Templates/靶機簡介模板.md"
     },
     {
       "basename": "SoSimple-Walkthrough",
       "path": "Proving Grounds Play/SoSimple/SoSimple-Walkthrough.md"
     },
     {
-      "basename": "Gaara",
-      "path": "Proving Grounds Play/Gaara/Gaara.md"
+      "basename": "Vegeta1-Walkthrough",
+      "path": "Proving Grounds Play/Vegeta1/Vegeta1-Walkthrough.md"
     },
     {
       "basename": "Election1-Walkthrough",
       "path": "Proving Grounds Play/Election1/Election1-Walkthrough.md"
     },
     {
-      "basename": "Vegeta1",
-      "path": "Proving Grounds Play/Vegeta1/Vegeta1.md"
-    },
-    {
-      "basename": "Vegeta1-Walkthrough",
-      "path": "Proving Grounds Play/Vegeta1/Vegeta1-Walkthrough.md"
+      "basename": "靶機紀錄模板",
+      "path": "Templates/靶機紀錄模板.md"
     },
     {
       "basename": "Monitoring",
       "path": "Proving Grounds Play/Monitoring/Monitoring.md"
+    },
+    {
+      "basename": "Stapler-Walkthrough",
+      "path": "Proving Grounds Play/Stapler/Stapler-Walkthrough.md"
     },
     {
       "basename": "InsanityHosting-Walkthrough",

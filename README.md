@@ -19,9 +19,11 @@
 	```
 
 3. **排除不需要同步的檔案（重要）**：
-在筆記根目錄下建立一個名為 `.gitignore` 的檔案，並寫入以下內容（避免將 Obsidian 的本地外觀設定或快取上傳）：
+在筆記根目錄下建立一個名為 `.gitignore` 的檔案(不要加副檔名 `.txt`)，並寫入以下內容（避免將 Obsidian 的本地外觀設定或快取上傳）：
 	```
-	.obsidian/workspace
+	.obsidian/workspace.json
+	.obsidian/graph.json
+	.obsidian/workspace-mobile.json
 	...........
 	```
 

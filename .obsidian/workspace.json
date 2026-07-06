@@ -11,42 +11,46 @@
             "id": "cdaf4b4ac0e1bb4d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "指令/wordpress.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新分頁"
+              "title": "wordpress"
             }
           },
           {
-            "id": "ad489e9d68ae9067",
+            "id": "91b3e6d05e76cc53",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "指令_手法/sudo_-l.md",
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "dfb1c66e4ff323ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "指令/sudo_-l.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "sudo_-l"
             }
-          },
-          {
-            "id": "3bed7e70d9ab61b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "指令_手法/port-knocking.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "port-knocking"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +73,7 @@
                 "autoReveal": true
               },
               "icon": "lucide-folder-closed",
-              "title": "檔案瀏覽器"
+              "title": "文件列表"
             }
           },
           {
@@ -88,7 +92,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:pg-play",
+                "query": "tag:suid",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -96,7 +100,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "搜尋"
+              "title": "搜索"
             }
           },
           {
@@ -163,12 +167,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": false,
-                "showSearch": true,
+                "useHierarchy": true,
+                "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "標籤"
+              "title": "标签"
             }
           },
           {
@@ -182,7 +186,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "所有屬性"
+              "title": "添加笔记属性"
             }
           },
           {
@@ -191,13 +195,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "指令_手法/port-knocking.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "port-knocking 的大綱"
+              "title": "README 的大纲"
             }
           },
           {
@@ -219,62 +223,62 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:開啟快速切換": false,
-      "graph:查看關聯圖": false,
-      "canvas:建立新畫布": false,
-      "daily-notes:開啟今天的每日筆記": false,
-      "command-palette:開啟命令面板": false,
-      "bases:建立新的 base": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
       "templates:插入模板": false
     }
   },
-  "active": "3bed7e70d9ab61b4",
+  "active": "91b3e6d05e76cc53",
   "lastOpenFiles": [
-    "Proving Grounds Play/DC-9/DC-9-Walkthrough.md",
-    "Proving Grounds Play/Potato/Potato-Walkthrough.md",
-    "Templates/靶機紀錄模板.md",
-    "Proving Grounds Play/DC-9/DC-9.md",
-    "指令_手法/sqli.md",
-    "Vulnhub/DC-9/DC-9.md",
-    "Proving Grounds Play/DC-9",
     "指令_手法/writable-etc-passwd.md",
-    "指令_手法/path-traversal.md",
-    "指令_手法/port-knocking.md",
-    "Proving Grounds Play/Blogger/Blogger.md",
-    "Vulnhub/DC-9/DC-9-Walkthrough.md",
-    "Vulnhub/DC-9",
-    "Vulnhub",
+    "指令_手法/wordpress.md",
+    "指令_手法/tar-wildcard.md",
+    "指令_手法/suid.md",
     "指令_手法/sudo_-l.md",
-    "Proving Grounds Play/Potato/Potato.md",
+    "指令_手法/ssh-private-key.md",
+    "指令_手法/ssh-bruteforce.md",
+    "指令_手法/sqli.md",
+    "指令_手法/rustscan.md",
+    "指令_手法/pwnkit.md",
+    "指令_手法/port-knocking.md",
     "指令_手法/php-type-juggling.md",
+    "指令_手法/path-traversal.md",
+    "指令_手法/path-hijacking.md",
+    "指令_手法/firefox-decrypt.md",
+    "指令_手法/nagios-rce.md",
+    "指令_手法/mysql.md",
+    "指令_手法/cron-job.md",
+    "指令_手法/file-upload.md",
+    "指令_手法/bash_history.md",
+    "指令_手法/base64-base58.md",
+    "指令_手法",
     "Proving Grounds Play/Potato/image/Pasted image 20260706032422.png",
     "Proving Grounds Play/Potato/image/Pasted image 20260706032249.png",
     "Proving Grounds Play/Potato/image/Pasted image 20260706032157.png",
-    "Proving Grounds Play/Potato/image/Pasted image 20260706031848.png",
     "Proving Grounds Play/Potato/image/Pasted image 20260706031807.png",
-    "Proving Grounds Play/Potato/image/Pasted image 20260706031710.png",
+    "Proving Grounds Play/Potato/image/Pasted image 20260706031848.png",
     "Proving Grounds Play/Potato/image/Pasted image 20260706031542.png",
+    "Proving Grounds Play/Potato/image/Pasted image 20260706031710.png",
     "Proving Grounds Play/Potato/image/Pasted image 20260706030157.png",
     "Proving Grounds Play/Potato/image/Pasted image 20260706030146.png",
+    "Proving Grounds Play/Potato/Potato.md",
+    "Proving Grounds Play/Potato/Potato-Walkthrough.md",
     "Proving Grounds Play/Potato/image",
-    "Proving Grounds Play/Stapler/Stapler.md",
-    "Proving Grounds Play/Blogger/Blogger-Walkthrough.md",
-    "Proving Grounds Play/Gaara/Gaara-Walkthrough.md",
-    "指令_手法/mysql.md",
-    "指令_手法/path-hijacking.md",
-    "Proving Grounds Play/Amaterasu/Amaterasu.md",
-    "指令_手法/file-upload.md",
-    "指令_手法/directory-traversal.md",
-    "Proving Grounds Play/SoSimple/SoSimple.md",
-    "指令_手法/wordpress.md",
-    "Templates/指令手法模板.md",
-    "指令_手法/tar-wildcard.md",
     "Proving Grounds Play/Potato",
+    "Proving Grounds Play/DC-9/DC-9.md",
+    "Proving Grounds Play/DC-9/DC-9-Walkthrough.md",
+    "Proving Grounds Play/DC-9",
     "Proving Grounds Play/Blogger/image/Pasted image 20260704232751.png",
     "Proving Grounds Play/Blogger/image",
+    "Proving Grounds Play/Blogger/Blogger.md",
     "Proving Grounds Play/Blogger",
     "Proving Grounds Play/Amaterasu/image",
     "Proving Grounds Play/Amaterasu",
-    "指令_手法"
+    "Proving Grounds Play/Gaara/image",
+    "Proving Grounds Play/Gaara"
   ]
 }
