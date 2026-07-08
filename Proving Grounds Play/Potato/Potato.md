@@ -33,7 +33,7 @@ difficulty: easy
 ## 3. 特權提升 (Privilege Escalation)
 *   **權限提升向量**：
     *   執行 `sudo -l` 發現 `webadmin` 可以以 root 權限執行 `/bin/nice /notes/*`（需要密碼）。
-    *   由於 `*` 通配符與 `nice` 指令本身均未限制相對路徑，利用 [[sudo_-l#💥 Sudo 萬用字元與路徑走訪繞過 (Sudo Wildcard Path Traversal)|Sudo 萬用字元與路徑走訪繞過]] 手法，使用相對路徑走訪 `..` 逃逸 `/notes/` 目錄。
+    *   由於 `*` 通配符與 `nice` 指令本身均未限制相對路徑，利用 [[sudo#💥 Sudo 萬用字元與路徑走訪繞過 (Sudo Wildcard Path Traversal)|Sudo 萬用字元與路徑走訪繞過]] 手法，使用相對路徑走訪 `..` 逃逸 `/notes/` 目錄。
 *   **取得 Root**：執行 `sudo /bin/nice /notes/../bin/bash`（或執行家目錄中寫有 `/bin/bash` 的自定義腳本），成功取得系統最高權限（`proof.txt`）。
 
 ## 🔗 資料來源 (References)

@@ -31,10 +31,10 @@ difficulty: easy
 ## 3. 特權提升 (Privilege Escalation)
 *   **橫向移動 (max -> steven)**：
     *   執行 `sudo -l` 發現 `max` 可免密碼以 `steven` 權限執行 `/usr/sbin/service` 指令。
-    *   利用 [[sudo_-l#💥 Sudo Service 提權|Sudo Service 提權]] 手法，成功切換為使用者 `steven`。
+    *   利用 [[sudo#💥 Sudo Service 提權|Sudo Service 提權]] 手法，成功切換為使用者 `steven`。
 *   **垂直提權 (steven -> root)**：
     *   在 `steven` 權限下執行 `sudo -l` 發現可免密碼以 root 權限執行不存在的 `/opt/tools/server-health.sh` 腳本。
-    *   利用 [[sudo_-l#💥 不存在腳本路徑的 Sudo 提權|不存在腳本路徑的 Sudo 提權]] 手法，建立該目錄與腳本並寫入反彈 Shell，執行後取得系統 `root` 權限與 `proof.txt`。
+    *   利用 [[sudo#💥 不存在腳本路徑的 Sudo 提權|不存在腳本路徑的 Sudo 提權]] 手法，建立該目錄與腳本並寫入反彈 Shell，執行後取得系統 `root` 權限與 `proof.txt`。
 
 ## 🔗 資料來源 (References)
 * [Medium - SoSimple CTF Walkthrough](https://medium.com/@wlevi/sosimple-ctf-walkthrough-57049000de08)

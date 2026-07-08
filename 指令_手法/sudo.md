@@ -1,4 +1,4 @@
-# Sudo 權限配置錯誤與利用 (sudo-l)
+# Sudo 權限配置錯誤與利用 (sudo -l)
 本文件說明如何利用 `sudo -l` (Sudoers 檔) 的配置錯誤進行本地權限提升（Privilege Escalation）。
 
 ---

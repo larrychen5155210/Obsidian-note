@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "source",
+                "file": "指令_手法/path-traversal.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "path-traversal"
             }
           },
           {
@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "指令/sudo_-l.md",
+                "file": "指令_手法/rustscan.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sudo_-l"
+              "title": "rustscan"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -232,53 +232,53 @@
       "templates:插入模板": false
     }
   },
-  "active": "91b3e6d05e76cc53",
+  "active": "dfb1c66e4ff323ff",
   "lastOpenFiles": [
+    "CLAUDE.md",
+    "Proving Grounds Play/DC-9/DC-9-Walkthrough.md",
+    "指令_手法/port-knocking.md",
+    "Proving Grounds Play/DC-9/image/Pasted image 20260707004613.png",
+    "Proving Grounds Play/DC-9/image/Pasted image 20260707003052.png",
+    "Proving Grounds Play/DC-9/image/Pasted image 20260707002820.png",
+    "Proving Grounds Play/DC-9/image/Pasted image 20260707002530.png",
+    "Proving Grounds Play/DC-9/image/Pasted image 20260707002427.png",
+    "Proving Grounds Play/DC-9/image/Pasted image 20260707002255.png",
+    "指令_手法/sqli.md",
+    "Proving Grounds Play/DC-9/image/Pasted image 20260707002001.png",
+    "Proving Grounds Play/DC-9/image/Pasted image 20260707001743.png",
+    "Proving Grounds Play/DC-9/image/Pasted image 20260707001503.png",
+    "指令_手法/path-traversal.md",
+    "Proving Grounds Play/Potato/Potato.md",
+    "Proving Grounds Play/Potato/Potato-Walkthrough.md",
+    "Proving Grounds Play/DC-9/DC-9.md",
+    "指令_手法/ffuf.md",
+    "Templates/指令手法模板.md",
+    "Proving Grounds Play/DC-9/image/Pasted image 20260706230240.png",
+    "Proving Grounds Play/DC-9/image",
+    "指令_手法/sudo.md",
+    "Proving Grounds Play/SoSimple/SoSimple.md",
+    "README.md",
+    "指令_手法/sudo_-l.md",
     "指令_手法/writable-etc-passwd.md",
     "指令_手法/wordpress.md",
     "指令_手法/tar-wildcard.md",
     "指令_手法/suid.md",
-    "指令_手法/sudo_-l.md",
     "指令_手法/ssh-private-key.md",
     "指令_手法/ssh-bruteforce.md",
-    "指令_手法/sqli.md",
     "指令_手法/rustscan.md",
     "指令_手法/pwnkit.md",
-    "指令_手法/port-knocking.md",
     "指令_手法/php-type-juggling.md",
-    "指令_手法/path-traversal.md",
     "指令_手法/path-hijacking.md",
     "指令_手法/firefox-decrypt.md",
     "指令_手法/nagios-rce.md",
-    "指令_手法/mysql.md",
-    "指令_手法/cron-job.md",
-    "指令_手法/file-upload.md",
-    "指令_手法/bash_history.md",
-    "指令_手法/base64-base58.md",
     "指令_手法",
-    "Proving Grounds Play/Potato/image/Pasted image 20260706032422.png",
-    "Proving Grounds Play/Potato/image/Pasted image 20260706032249.png",
-    "Proving Grounds Play/Potato/image/Pasted image 20260706032157.png",
-    "Proving Grounds Play/Potato/image/Pasted image 20260706031807.png",
-    "Proving Grounds Play/Potato/image/Pasted image 20260706031848.png",
-    "Proving Grounds Play/Potato/image/Pasted image 20260706031542.png",
-    "Proving Grounds Play/Potato/image/Pasted image 20260706031710.png",
-    "Proving Grounds Play/Potato/image/Pasted image 20260706030157.png",
-    "Proving Grounds Play/Potato/image/Pasted image 20260706030146.png",
-    "Proving Grounds Play/Potato/Potato.md",
-    "Proving Grounds Play/Potato/Potato-Walkthrough.md",
     "Proving Grounds Play/Potato/image",
     "Proving Grounds Play/Potato",
-    "Proving Grounds Play/DC-9/DC-9.md",
-    "Proving Grounds Play/DC-9/DC-9-Walkthrough.md",
     "Proving Grounds Play/DC-9",
-    "Proving Grounds Play/Blogger/image/Pasted image 20260704232751.png",
     "Proving Grounds Play/Blogger/image",
-    "Proving Grounds Play/Blogger/Blogger.md",
     "Proving Grounds Play/Blogger",
     "Proving Grounds Play/Amaterasu/image",
     "Proving Grounds Play/Amaterasu",
-    "Proving Grounds Play/Gaara/image",
-    "Proving Grounds Play/Gaara"
+    "Proving Grounds Play/Gaara/image"
   ]
 }

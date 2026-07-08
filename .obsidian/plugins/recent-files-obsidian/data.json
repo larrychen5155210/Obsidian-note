@@ -1,6 +1,46 @@
 {
   "recentFiles": [
     {
+      "basename": "rustscan",
+      "path": "指令_手法/rustscan.md"
+    },
+    {
+      "basename": "DC-9-Walkthrough",
+      "path": "Proving Grounds Play/DC-9/DC-9-Walkthrough.md"
+    },
+    {
+      "basename": "port-knocking",
+      "path": "指令_手法/port-knocking.md"
+    },
+    {
+      "basename": "sqli",
+      "path": "指令_手法/sqli.md"
+    },
+    {
+      "basename": "path-traversal",
+      "path": "指令_手法/path-traversal.md"
+    },
+    {
+      "basename": "Potato",
+      "path": "Proving Grounds Play/Potato/Potato.md"
+    },
+    {
+      "basename": "Potato-Walkthrough",
+      "path": "Proving Grounds Play/Potato/Potato-Walkthrough.md"
+    },
+    {
+      "basename": "DC-9",
+      "path": "Proving Grounds Play/DC-9/DC-9.md"
+    },
+    {
+      "basename": "sudo",
+      "path": "指令_手法/sudo.md"
+    },
+    {
+      "basename": "SoSimple",
+      "path": "Proving Grounds Play/SoSimple/SoSimple.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -11,10 +51,6 @@
     {
       "basename": "Gaara",
       "path": "Proving Grounds Play/Gaara/Gaara.md"
-    },
-    {
-      "basename": "SoSimple",
-      "path": "Proving Grounds Play/SoSimple/SoSimple.md"
     },
     {
       "basename": "Vegeta1",
