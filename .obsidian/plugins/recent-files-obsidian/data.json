@@ -1,24 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "rustscan",
-      "path": "指令_手法/rustscan.md"
-    },
-    {
       "basename": "DC-9-Walkthrough",
       "path": "Proving Grounds Play/DC-9/DC-9-Walkthrough.md"
     },
     {
-      "basename": "port-knocking",
-      "path": "指令_手法/port-knocking.md"
+      "basename": "writable-etc-passwd",
+      "path": "指令_手法/writable-etc-passwd.md"
+    },
+    {
+      "basename": "path-traversal",
+      "path": "指令_手法/path-traversal.md"
+    },
+    {
+      "basename": "DC-9",
+      "path": "Proving Grounds Play/DC-9/DC-9.md"
     },
     {
       "basename": "sqli",
       "path": "指令_手法/sqli.md"
     },
     {
-      "basename": "path-traversal",
-      "path": "指令_手法/path-traversal.md"
+      "basename": "rustscan",
+      "path": "指令_手法/rustscan.md"
+    },
+    {
+      "basename": "port-knocking",
+      "path": "指令_手法/port-knocking.md"
     },
     {
       "basename": "Potato",
@@ -27,10 +35,6 @@
     {
       "basename": "Potato-Walkthrough",
       "path": "Proving Grounds Play/Potato/Potato-Walkthrough.md"
-    },
-    {
-      "basename": "DC-9",
-      "path": "Proving Grounds Play/DC-9/DC-9.md"
     },
     {
       "basename": "sudo",
