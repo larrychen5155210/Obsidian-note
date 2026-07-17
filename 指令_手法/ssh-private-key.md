@@ -34,7 +34,22 @@ chmod 600 id_rsa
 ssh -i id_rsa <username>@<target_ip>
 ```
 
+### 4. 破解加密私鑰 (Passphrase Protected Key)
+若私鑰設定了密碼保護 (Passphrase)，在使用 SSH 登入時會提示輸入密碼。此時可使用 `john` 工具進行本地破解：
+1. **將私鑰轉換為 John 可識別的 Hash 格式**：
+   ```bash
+   ssh2john id_rsa > id_rsa.hash
+   ```
+2. **使用字典（如 rockyou.txt）進行破解**：
+   ```bash
+   john id_rsa.hash --wordlist=/usr/share/wordlists/rockyou.txt
+   ```
+3. **使用破解出的密碼配合私鑰進行 SSH 登入**。
+
 ---
 
 # 實戰關聯
-*   **靶機應用實例**：[[SoSimple]]（透過 `www-data` 權限發現 `/home/max/.ssh/id_rsa` 權限設定錯誤為世界可讀，下載該私鑰後成功 SSH 登入為 `max` 使用者）。
+*   **靶機應用實例**：
+    *   [[SoSimple]]（透過 `www-data` 權限發現 `/home/max/.ssh/id_rsa` 權限設定錯誤為世界可讀，下載該私鑰後成功 SSH 登入為 `max` 使用者）。
+    *   [[Beyond]]（利用外掛漏洞讀取 `daniela` 的加密私鑰，使用 `ssh2john` 與 `john` 破解出其 Passphrase `tequieromucho` 後成功 SSH 登入）。
+
