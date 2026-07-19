@@ -52,4 +52,6 @@ tar czf /tmp/backup.tar.gz --help file1.txt file2.txt
    ```
 
 # 實戰關聯
-- [[Amaterasu]]
+*   **靶機應用實例**：
+    *   [[Amaterasu]]
+    *   [[OSCP-C]]（在 Linux 外網主機 192.168.x.157 上，普通用戶 `cassie` 發現系統背景有一個以 `root` 運行的 cron job，定時執行 `cd /opt/admin && tar -zxf /tmp/backup.tar.gz *`。由於 `cassie` 對 `/opt/admin` 目錄具有寫入權限，藉由 touch 建立 `--checkpoint=1` 和 `--checkpoint-action=exec=sh shell.sh` 兩個惡意參數檔，並將 shell.sh 寫入 `chmod u+s /bin/bash`，等待 cron job 執行後成功取得 `/bin/bash` SUID，最終執行 `/bin/bash -p` 取得 root 權限）。

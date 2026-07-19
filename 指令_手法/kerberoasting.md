@@ -28,17 +28,16 @@ impacket-GetUserSPNs -dc-ip <DC_IP> -request -outputfile <output_filename.kerber
 ```
 
 ### 3. 離線 Hash 破解
-使用 `hashcat` 的 `13100` 模式（Kerberos 5 TGS-REP etype 23）或 `john` 對票據進行字典破解：
-```bash
-# Hashcat 破解
-hashcat -m 13100 <output_filename.kerberoast> /usr/share/wordlists/rockyou.txt
+詳細的離線 Hash 破解指令可參考 [[hash-cracking#3. Kerberos TGS-REP 破解 (Mode 13100)|密碼與雜湊值破解 - Kerberos TGS-REP 破解]]，使用 `hashcat` 模式 `13100`（Kerberos 5 TGS-REP etype 23）或 `john` 進行字典爆破。
 
-# John 破解
-john --wordlist=/usr/share/wordlists/rockyou.txt <output_filename.kerberoast>
-```
+## 💥 AD 域內 GenericWrite 權限濫用與 Targeted Kerberoasting (GenericWrite SPN Abuse)
+若攻擊者對目標域使用者物件擁有 `GenericWrite` 權限，可以藉此註冊虛擬 SPN 屬性來強行對其發起 Targeted Kerberoasting。
+
+詳細的利用原理與工具指令（如 `targetedKerberoast.py`），請參考獨立的手法筆記：[[ad-acl-abuse#💥 GenericWrite 權限對使用者對象之濫用 (Targeted Kerberoasting)|AD 域內 ACL 權限濫用]]。
 
 ---
 
 # 實戰關聯
 *   **靶機應用實例**：
     *   [[Beyond]]（在進入內網並取得 Domain user `john` 憑證後，對域控 `172.16.180.240` 發起 Kerberoasting。成功請求到 `http/internalsrv1.beyond.com` 服務帳戶 `daniela` 的 TGS，並使用 `hashcat` 破解出其密碼 `DANIelaRO123`，進而成功登入 internalsrv1 的 WordPress 後台）。
+    *   [[Laser]]（域帳戶 `yulia.weber` 對域帳戶 `boris.crawford` 具有 `GenericWrite` 權限。使用 `targetedKerberoast.py` 自動為其設定 SPN 並發起 Targeted Kerberoasting，導出 Ticket Hash 後，利用 `hashcat` 成功破解出 `boris.crawford` 的明文密碼 `zxcvbnm`，成功接管該高權限管理員帳號）。

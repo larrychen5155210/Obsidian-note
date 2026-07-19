@@ -57,7 +57,7 @@ difficulty: hard
     *   使用 `daniela` 憑證登入 `internalsrv1.beyond.com` 的 WordPress 後台。
     *   偵測發現 MAILSRV1 未強制啟用 SMB 簽名。
     *   利用 [[wordpress#💥 Backup Migration 外掛配合 NTLM 中間人轉發 (Backup Migration NTLM Relay)|Backup Migration NTLM Relay]] 手法，將備份路徑修改為攻擊機的 SMB 共用路徑以誘發連線。
-    *   利用 [[ntlm-relay#💥 NTLM 中間人轉發攻擊 (ntlm-relay)|NTLM Relay]] 將認證轉發至 MAILSRV1，成功以 `nt authority\system` 權限接回反彈 Shell。
+    *   利用 [[ntlm-relay#💥 Impacket ntlmrelayx 轉發利用 (ntlmrelayx)|ntlmrelayx 轉發利用]] 將認證轉發至 MAILSRV1，成功以 `nt authority\system` 權限接回反彈 Shell。
 
 ## 5. 域控拿下 (DC Compromise)
 *   **憑證轉儲**：在 MAILSRV1 上利用 `mimikatz` 導出記憶體憑證，取得 Domain Admin `beccy` 的 NTLM Hash：**`f0397ec5af49971f6efbdb07877046b3`**。

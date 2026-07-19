@@ -27,7 +27,7 @@ difficulty: easy
     *   分析 `index.php.bak` 原始碼，發現登入驗證採用 `strcmp($_POST['password'], $pass) == 0`，存在 PHP 弱型別缺陷。
     *   利用 [[php-type-juggling#💥 PHP 弱類型比較與 strcmp 繞過 (php-type-juggling)|strcmp 弱類型比較繞過]]，將密碼參數修改為陣列 `password[]=` 傳遞，繞過驗證成功登入後台。
     *   在後台 `dashboard.php` 中發現日誌讀取功能存在漏洞，利用 [[path-traversal#💥 路徑/目錄走訪 (path-traversal)|目錄走訪]] 漏洞讀取 `/etc/passwd`，獲取了使用者 `webadmin` 的密碼 Hash（`$1$webadmin$3sXBxGUtDGIFAcnNTNhi6/`）。
-    *   使用 `john` 或 `hashcat` 工具破解該 Hash，成功解密密碼為 `dragon`。
+    *   使用 `john` 或 `hashcat` 工具對該 Hash 發起 [[hash-cracking#6. Linux md5crypt 密碼破解 (Mode 500)|md5crypt 離線破解]]，成功解密明文密碼為 `dragon`。
 *   **Shell 取得**：使用憑證 `webadmin:dragon` 透過 SSH 登入，取得初始系統存取權（`local.txt`）。
 
 ## 3. 特權提升 (Privilege Escalation)

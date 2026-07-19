@@ -36,7 +36,7 @@
    show tables;
    select * from wp_users;
    ```
-   獲取密碼 Hash 後，可將其保存至本地，利用 `hashcat`（WordPress 模式編號為 `-m 400`）進行字典破解。
+   獲取密碼 Hash 後，可將其保存至本地，詳細的離線 Hash 破解指令可參考 [[hash-cracking#4. WordPress (MD5 / phpass) 破解 (Mode 400)|密碼與雜湊值破解 - WordPress 破解]]，使用 `hashcat` 模式 `400` 進行字典爆破。
 
 ---
 

